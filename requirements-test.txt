@@ -5,3 +5,5 @@ flake8>=2.1.0
 tox>=1.7.0
 
 # Additional test requirements go here
+djangorestframework==3.3.2
+funcy==1.7.1

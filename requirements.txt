@@ -1,2 +1,4 @@
 django>=1.9.1
 # Additional requirements go here
+djangorestframework==3.3.2
+funcy==1.7.1
