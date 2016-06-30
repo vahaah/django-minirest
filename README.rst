@@ -12,6 +12,8 @@ Micro rest framework
 
 Documentation
 -------------
+Mini DRF for you project
+
 
 The full documentation is at https://django-minirest.readthedocs.org.
 
@@ -22,9 +24,14 @@ Install django-minirest::
 
     pip install django-minirest
 
-Then use it in a project::
+Then use it in a project urls::
 
-    import minirest
+    urlpatterns = [
+        url(r'^api/v1/', include('minirest.urls', namespace='minirest')),
+    ]
+Enjoy::
+
+    GET localhost:8000/api/v1/<app_name>/<model_name>/
 
 Features
 --------

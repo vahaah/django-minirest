@@ -6,13 +6,14 @@ from django.views.decorators.http import require_http_methods
 from rest_framework.parsers import JSONParser
 
 from .loading import get_model
-from .perms import check_model_perms
+from .perms import check_model_perms, check_view_perms
 from .utils import dynamic_serializer, parse_qs
 
 
 @csrf_protect
 @require_http_methods(["GET"])
 @check_model_perms
+@check_view_perms('list')
 def list_view(request, app_label, model_name):
     model = get_model(app_label, model_name)
     queryset = model.objects.all()
