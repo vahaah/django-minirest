@@ -53,7 +53,7 @@ setup(
     ],
     include_package_data=True,
     install_requires=[
-        'djangorestframework==3.3.2',
+        'djangorestframework==3.9.1',
         'funcy==1.7.1'
     ],
     license="BSD",
